@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from 'react';\nexport default function App() {}","map":{"version":3,"sources":["C:/git/blankProject/App.js"],"names":["React","App"],"mappings":"AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,eAAe,SAASC,GAAT,GAAgB,CAE9B","sourcesContent":["import React from 'react';\r\n\r\nexport default function App () {\r\n    \r\n}"]},"metadata":{},"sourceType":"module"}
