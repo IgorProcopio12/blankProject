@@ -6,7 +6,7 @@ export default function Button({ text, onPress }) {
     return (
         <TouchableOpacity onPress={onPress}>
             <View style={styles.button}>
-                <Text style={styles.buttonText}>{ text }</Text>
+                <Text style={styles.homeButtonText}>{ text }</Text>
             </View>
         </TouchableOpacity>
     )

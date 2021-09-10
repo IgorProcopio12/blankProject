@@ -13,33 +13,39 @@ const styles = StyleSheet.create({
 
   crudButton: {
     border: 100,
-    borderColor: 'white',
+    borderColor: 'chartreuse',
     width: 150,
     height: 30,
-    margin:20,
+    margin: 20,
     marginLeft: 120,
     borderRadius: 50,
     paddingVertical: 14,
     paddingHorizontal: 20,
     backgroundColor: "black",
-    justifyContent: 'center',
-
+    justifyContent: "center",
   },
 
   clearButton: {
     width: 120,
     height: 30,
-    borderColor: 'white',
+    borderColor: "white",
     marginLeft: 135,
     borderRadius: 50,
     paddingVertical: 14,
     paddingHorizontal: 20,
     backgroundColor: "black",
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 
   buttonText: {
-    color: 'white',
+    color: "white",
+    textTransform: "uppercase",
+    fontSize: 14,
+    textAlign: "center",
+  },
+
+  homeButtonText: {
+    fontWeight:'bold',
     textTransform: "uppercase",
     fontSize: 14,
     textAlign: "center",
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
     color: "chartreuse",
     marginTop: 20,
     marginRight: 20,
-    marginLeft: 140,
+    marginLeft: 90,
     marginBottom: 40,
   },
 
@@ -75,30 +81,23 @@ const styles = StyleSheet.create({
     height: 30,
     marginLeft: 20,
     padding: 5,
-    display: 'flex',
-
+    display: "flex",
   },
 
   label: {
     fontSize: 16,
     color: "chartreuse",
     margin: 30,
-    
- 
   },
 
   type: {
-    justifyContent: 'right',
+    justifyContent: "right",
     height: 20,
     width: 40,
     marginTop: 5,
     marginLeft: 30,
-    backgroundColor: '#black',
-    
-  }
-
-
-
+    backgroundColor: "#black",
+  },
 });
 
 export default styles;
