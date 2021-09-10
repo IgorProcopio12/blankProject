@@ -1,11 +1,13 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { StyleSheet, View, SafeAreaView, Switch, Text } from "react-native";
+import { StyleSheet, View, SafeAreaView, Text } from "react-native";
 import Slider from "@react-native-community/slider";
 import { Picker } from "@react-native-picker/picker";
-import {  TextInput } from "react-native-paper";
+import { Switch } from "react-native-paper";
+import { TextInput } from "react-native-paper";
 
-import Button from "../components/Button";
 import styles from "../styles/Styles";
+import ProcessButton from "../components/ProcessButton";
+import ClearButton from "../components/ClearButton";
 
 export default function Banco({ navigation }) {
   const [name, setName] = useState("");
@@ -14,15 +16,26 @@ export default function Banco({ navigation }) {
   const [value, setValue] = useState(0);
   const [type, setType] = useState(false);
 
-  const confirmarOperacao = () => {};
-
-  const reset = () => {
+  const confirmarOperacao = () => {
+      if(name && age && value > 0) {
+        const types = (type)?"Universitária":"Normal"
+        alert("Sua Conta foi Registrada! \n Nome: " +name+ " \n Idade: " 
+        +age+ "\n Genero: " +gender+ "\n Limite Inicial: " +value+ "\n Tipo de Conta: " +types)
+      }else{
+        alert("Preencha os Dados Corretamente");
+      }
+    }
+  const clear = () => {
     setName("");
     setAge("");
     setGender("");
     setValue(0);
     setType(false);
   };
+
+  useEffect(() => {
+    setValue(Math.floor(value))
+  },[value]);
 
   return (
     <SafeAreaView style={styles.safeView}>
@@ -41,7 +54,6 @@ export default function Banco({ navigation }) {
         <Text style={styles.label}>Idade:</Text>
         <TextInput
           value={age}
-          id="name"
           onChangeText={setAge}
           mode="outlined"
           style={styles.input}
@@ -77,7 +89,7 @@ export default function Banco({ navigation }) {
             marginLeft: 30,
             marginBottom: 20,
           }}
-          maximumValue={20000}
+          maximumValue={2000}
           minimumValue={0}
           minimumTrackTintColor="#307ecc"
           maximumTrackTintColor="#000000"
@@ -87,11 +99,27 @@ export default function Banco({ navigation }) {
         />
       </div>
       <div>
-        <Text style={{ fontSize: 16, color: "chartreuse", margin: 30 }}>
-          Estudante:
+        <Switch
+          input="Estudante"
+          style={styles.type}
+          value={type}
+          onValueChange={setType}
+        />
+        <Text style={{ fontSize: 16, color: "chartreuse",
+         margin: 30,  }}>
+          Estudante
         </Text>
-        <Switch style={styles.type} value={type} onValueChange={setType} />
+      </div>
+     <div>
+       <ProcessButton text="Processar" 
+       onPress={confirmarOperacao}
+        >
 
+       </ProcessButton>
+       <ClearButton text="Limpar"
+       onPress={clear}>
+
+       </ClearButton>
       </div>
     </SafeAreaView>
   );

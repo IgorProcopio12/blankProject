@@ -11,11 +11,37 @@ const styles = StyleSheet.create({
     backgroundColor: "chartreuse",
   },
 
+  crudButton: {
+    border: 100,
+    borderColor: 'white',
+    width: 150,
+    height: 30,
+    margin:20,
+    marginLeft: 120,
+    borderRadius: 50,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    backgroundColor: "black",
+    justifyContent: 'center',
+
+  },
+
+  clearButton: {
+    width: 120,
+    height: 30,
+    borderColor: 'white',
+    marginLeft: 135,
+    borderRadius: 50,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    backgroundColor: "black",
+    justifyContent: 'center',
+  },
+
   buttonText: {
-    color: "black",
-    fontWeight: "bold",
+    color: 'white',
     textTransform: "uppercase",
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "center",
   },
 
@@ -42,7 +68,6 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    color: 'white',
     fontSize: "16px",
     borderColor: "gray",
     backgroundColor: "#343732",
@@ -63,10 +88,12 @@ const styles = StyleSheet.create({
   },
 
   type: {
+    justifyContent: 'right',
     height: 20,
     width: 40,
-    marginTop: 10,
-    marginLeft: 65,
+    marginTop: 5,
+    marginLeft: 30,
+    backgroundColor: '#black',
     
   }
 
